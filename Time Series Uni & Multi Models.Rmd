@@ -3,13 +3,13 @@
 This analysis is used to describe, a univariate and multivairate model using the Box-Jenkins methods for time series analysis. This is written as an R Markdown file. 
 
 A few comments first, I will describe only a full process  for the univariate analysis.
-ADF Differenced – No Unit Root
-ADF Normal – Unit Root
-ARIMA – 1,1,1
-Residual Independence – Yes  
+ADF Differenced â€“ No Unit Root
+ADF Normal â€“ Unit Root
+ARIMA â€“ 1,1,1
+Residual Independence â€“ Yes  
 
 
-To begin the analysis, I have chosen to perform a univariate analysis on the following five currency pairs. The Brazilian Real, Mexican Peso, Indian Rupee, Canadian Dollar, and the Swiss Franc. All of the currency pairs I have chosen are measured against the United States dollar, partially due to the plethora of available data but also due to the influence the Dollar has in global economics. All the data I gathered is from FRED (Federal Reserve Economic Data) in the form of monthly data, beginning in 2000 and extending through April 2018. For the showcase univariate model, I have chosen to show the Brazilian Real against the United States Dollar.
+To begin the analysis, I have chosen to perform a univariate analysis on the following currency pair. The Brazilian Real, Mexican Peso and the United States Dollar. Due to the plethora of available data but also due to the influence the Dollar has in global economics. All the data I gathered is from FRED (Federal Reserve Economic Data).
 
 ```{r}
 rm(list=ls())
@@ -33,7 +33,7 @@ BRLUSD <-ts(BRLUSD, start = 2000, frequency = 12)
 ```
 
 
-First, I need to import libraries, import the data which is saved from my computer, and transform the data into a Time Series that is discernable for R Studio. The data imported is monthly data so a frequency of 12 is needed. 
+ The data imported is monthly data so a frequency of 12 is needed. 
 
 
 ```{r}
